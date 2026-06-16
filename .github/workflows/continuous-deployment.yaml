@@ -1,31 +1,35 @@
-name: Deploy to github pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - 'master'
+      - master
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.x]
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm install
-      - run: npm run build --if-present
+        uses: actions/checkout@v4
 
-      - name: deploy files
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: docs
-          CLEAN: true # Automatically remove deleted files from the deploy branch
+          node-version: '20'
+
+      - name: Install dependencies
+        working-directory: frontend
+        run: npm ci
+
+      - name: Build
+        working-directory: frontend
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@22a6ee251d6f13c6ab1547bff7de6676c0439f10  # v4.4.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: frontend/dist
+          clean: true
