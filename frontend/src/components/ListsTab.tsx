@@ -5,7 +5,7 @@ export function ListsTab() {
   return (
     <div>
       <p className="text-gray-500 text-sm mb-5">
-        Jon's curated Google Maps lists. Add your My Maps IDs in <code className="text-xs bg-gray-100 px-1 py-0.5 rounded">src/data/lists.ts</code> to enable inline map embeds.
+        Jon's curated lists — tap any card to open it in Google Maps.
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {myLists.map(list => (

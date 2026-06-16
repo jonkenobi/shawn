@@ -5,7 +5,7 @@ import { ListsTab } from './components/ListsTab';
 type Tab = 'areas' | 'lists';
 
 export default function App() {
-  const [tab, setTab] = useState<Tab>('areas');
+  const [tab, setTab] = useState<Tab>('lists');
 
   return (
     <div className="min-h-screen bg-[#f8f7f4]">
@@ -17,20 +17,20 @@ export default function App() {
           </div>
           <div className="flex bg-gray-100 rounded-xl p-1">
             <button
-              onClick={() => setTab('areas')}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                tab === 'areas' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-500 hover:text-gray-700'
-              }`}
-            >
-              🗺️ Areas
-            </button>
-            <button
               onClick={() => setTab('lists')}
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                 tab === 'lists' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-500 hover:text-gray-700'
               }`}
             >
               📍 My Lists
+            </button>
+            <button
+              onClick={() => setTab('areas')}
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                tab === 'areas' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-500 hover:text-gray-700'
+              }`}
+            >
+              🗺️ Areas
             </button>
           </div>
         </div>

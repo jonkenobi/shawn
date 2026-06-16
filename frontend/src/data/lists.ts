@@ -1,58 +1,52 @@
 import type { MyList } from '../types';
 
-// To get a Google My Maps ID:
-// 1. Go to mymaps.google.com and open your map
-// 2. Click Share → copy the URL
-// 3. The ID is the long string after /d/ in the URL
-// Replace the myMapsId values below with your actual map IDs.
-
 export const myLists: MyList[] = [
+  {
+    id: 'bars',
+    name: 'Bars',
+    emoji: '🍸',
+    description: "Jon's favourite bars in Tokyo",
+    myMapsId: null,
+    linkUrl: 'https://maps.app.goo.gl/UeTFUb7WUGHi2XTx8',
+  },
+  {
+    id: 'fine-dining',
+    name: 'Fine Restaurants',
+    emoji: '🍽️',
+    description: 'Special occasion spots and great sit-down meals',
+    myMapsId: null,
+    linkUrl: 'https://maps.app.goo.gl/q6rhZMyWkFZ1V1b96',
+  },
+  {
+    id: 'cafes',
+    name: 'Cafes',
+    emoji: '☕',
+    description: 'Great cafes for working or catching up',
+    myMapsId: null,
+    linkUrl: 'https://maps.app.goo.gl/X29HKkeVyKgup7v48',
+  },
+  {
+    id: 'pastries',
+    name: 'Pastries',
+    emoji: '🥐',
+    description: 'Bakeries and pastry spots worth seeking out',
+    myMapsId: null,
+    linkUrl: 'https://maps.app.goo.gl/pVKVgcpWcwWnfbJE9',
+  },
   {
     id: 'ramen',
     name: 'Ramen',
     emoji: '🍜',
     description: "Jon's favourite ramen spots across Tokyo",
-    myMapsId: null, // replace with your My Maps ID e.g. '1sM34DaCOyh65Kv0i3ZaKMXcqc_pR3v'
-    linkUrl: null,
+    myMapsId: null,
+    linkUrl: 'https://maps.app.goo.gl/HfYWtCXBSpNGgV1H6',
   },
   {
-    id: 'bars',
-    name: 'Bars & Pubs',
-    emoji: '🍺',
-    description: 'Best bars for a late night out',
+    id: 'izakaya',
+    name: 'Izakaya',
+    emoji: '🏮',
+    description: 'Best izakayas for drinks and small plates',
     myMapsId: null,
-    linkUrl: null,
-  },
-  {
-    id: 'italian',
-    name: 'Italian',
-    emoji: '🍝',
-    description: 'Italian spots worth travelling across the city for',
-    myMapsId: null,
-    linkUrl: null,
-  },
-  {
-    id: 'cafes',
-    name: 'Cafes & Coffee',
-    emoji: '☕',
-    description: 'Where to work or catch up over a good cup',
-    myMapsId: null,
-    linkUrl: null,
-  },
-  {
-    id: 'korean',
-    name: 'Korean',
-    emoji: '🥩',
-    description: 'Yakiniku, Korean BBQ and more',
-    myMapsId: null,
-    linkUrl: null,
-  },
-  {
-    id: 'mexican',
-    name: 'Mexican',
-    emoji: '🌮',
-    description: 'Best Mexican and Latin spots in the city',
-    myMapsId: null,
-    linkUrl: null,
+    linkUrl: 'https://maps.app.goo.gl/4R9ijHuy8eDJnVeh7',
   },
 ];
