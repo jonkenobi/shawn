@@ -34,9 +34,9 @@ export function AreasTab() {
 
   return (
     <div>
-      <p className="text-gray-500 text-sm mb-5">Sort areas by what you're in the mood for.</p>
+      <p className="text-gray-500 text-sm mb-6">Sort areas by what you're in the mood for.</p>
 
-      <div className="flex gap-2 flex-wrap mb-6">
+      <div className="flex gap-2 flex-wrap mb-8">
         {VIBES.map(v => (
           <button
             key={v.key}
