@@ -66,3 +66,8 @@ Backend infrastructure lives in `serverless-backend/terraform/`. Do not modify w
 
 Active development branch: `claude/new-session-aylad9`
 Main branch: `master`
+
+
+## AI skills, agents, and MCP configs
+
+If you use a skill that isn't yet committed in `.claude/skills/`, copy it into the repo's `.claude/` directory and commit it as part of the change.
