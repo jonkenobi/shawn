@@ -15,7 +15,7 @@ export function ListCard({ list }: Props) {
       <div className="p-8 flex flex-col flex-1">
         <span className="text-3xl mb-5 block">{list.emoji}</span>
         <h3 className="text-lg font-semibold text-gray-900">{name}</h3>
-        <p className="text-sm text-gray-500 mt-2.5">{description}</p>
+        {description && <p className="text-sm text-gray-500 mt-2.5">{description}</p>}
 
         <div className="flex gap-3 mt-auto pt-7">
           {list.linkUrl ? (
