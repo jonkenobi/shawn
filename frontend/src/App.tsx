@@ -54,7 +54,8 @@ export default function App() {
               >
                 <circle cx="12" cy="12" r="9" />
                 <path d="M3 12h18" />
-                <path d="M12 3c2.5 2.5 3.75 5.5 3.75 9s-1.25 6.5-3.75 9c-2.5-2.5-3.75-5.5-3.75-9S9.5 5.5 12 3Z" />
+                <ellipse cx="12" cy="12" rx="3" ry="9" />
+                <ellipse cx="12" cy="12" rx="6.5" ry="9" />
               </svg>
             </button>
           </div>
