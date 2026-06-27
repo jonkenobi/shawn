@@ -12,8 +12,7 @@ export default function App() {
       <header className="bg-white border-b border-gray-100 sticky top-0 z-10">
         <div className="page-inner py-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h1 className="text-2xl font-bold text-gray-900 tracking-tight leading-none">Jon's Tokyo</h1>
-            <p className="text-sm text-gray-400 mt-2">今日はどこへ行く？</p>
+            <h1 className="text-2xl font-bold text-gray-900 tracking-tight leading-none">今日はどこへ行く？</h1>
           </div>
           <div className="flex bg-gray-100 rounded-xl p-1 gap-1">
             <button
