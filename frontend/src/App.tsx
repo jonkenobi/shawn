@@ -35,26 +35,14 @@ export default function App() {
                 🗺️ {t('tabs.areas')}
               </button>
             </div>
-            <div className="flex bg-gray-100 rounded-xl p-1 gap-1">
-              <button
-                onClick={() => i18n.changeLanguage('en')}
-                aria-label={t('language.label')}
-                className={`px-3 py-2.5 rounded-lg text-sm font-medium transition-all ${
-                  i18n.resolvedLanguage === 'en' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-500 hover:text-gray-700'
-                }`}
-              >
-                EN
-              </button>
-              <button
-                onClick={() => i18n.changeLanguage('ja')}
-                aria-label={t('language.label')}
-                className={`px-3 py-2.5 rounded-lg text-sm font-medium transition-all ${
-                  i18n.resolvedLanguage === 'ja' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-500 hover:text-gray-700'
-                }`}
-              >
-                日本語
-              </button>
-            </div>
+            <button
+              onClick={() => i18n.changeLanguage(i18n.resolvedLanguage === 'ja' ? 'en' : 'ja')}
+              aria-label={t('language.label')}
+              title={t('language.label')}
+              className="flex items-center justify-center w-10 h-10 rounded-lg text-lg text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-all"
+            >
+              🌐
+            </button>
           </div>
         </div>
       </header>
