@@ -16,7 +16,7 @@ body {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  button:not(:disabled) {
+  .cursor-pointer-desktop:not(:disabled) {
     cursor: pointer;
   }
 }
