@@ -2,7 +2,7 @@
 
 ## Project overview
 
-**Jon's Tokyo** — a personal guide to Jon's favourite restaurants, cafes, and bars in Tokyo.
+**Shawn** — a personal guide to Jon's favourite restaurants, cafes, and bars in Tokyo. (App name is a placeholder for now.)
 Shareable with friends and useful when you're already in an area and want to know what Jon liked nearby.
 
 Two sections:
@@ -61,12 +61,6 @@ Existing AWS API Gateway (not changed in this rewrite):
 Base URL: `https://pnsqr5ug4b.execute-api.ap-northeast-1.amazonaws.com/dev`
 
 Backend infrastructure lives in `serverless-backend/terraform/`. Do not modify without understanding Terraform state.
-
-## Branch
-
-Active development branch: `claude/new-session-aylad9`
-Main branch: `master`
-
 
 ## AI skills, agents, and MCP configs
 
