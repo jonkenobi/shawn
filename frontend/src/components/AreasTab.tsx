@@ -43,7 +43,7 @@ export function AreasTab() {
           <button
             key={v.key}
             onClick={() => setActiveVibe(v.key)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+            className={`cursor-pointer-desktop px-4 py-2 rounded-full text-sm font-medium transition-all ${
               activeVibe === v.key
                 ? 'bg-gray-900 text-white'
                 : 'bg-white text-gray-600 border border-gray-200 hover:border-gray-400'
