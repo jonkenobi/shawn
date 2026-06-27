@@ -39,9 +39,23 @@ export default function App() {
               onClick={() => i18n.changeLanguage(i18n.resolvedLanguage === 'ja' ? 'en' : 'ja')}
               aria-label={t('language.label')}
               title={t('language.label')}
-              className="flex items-center justify-center w-10 h-10 rounded-lg text-lg text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-all"
+              className="flex items-center justify-center w-10 h-10 rounded-lg text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-all"
             >
-              🌐
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.75"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3 12h18" />
+                <path d="M12 3c2.5 2.5 3.75 5.5 3.75 9s-1.25 6.5-3.75 9c-2.5-2.5-3.75-5.5-3.75-9S9.5 5.5 12 3Z" />
+              </svg>
             </button>
           </div>
         </div>
