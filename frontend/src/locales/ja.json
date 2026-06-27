@@ -1,0 +1,59 @@
+{
+  "header": {
+    "title": "今日はどこへ行く？"
+  },
+  "tabs": {
+    "lists": "マイリスト",
+    "areas": "エリア"
+  },
+  "areas": {
+    "subtitle": "目的でエリアを絞り込む",
+    "fallbackNotice": "サンプルデータを表示中 — APIに接続すると実際のエリアが表示されます",
+    "noStandoutVibes": "目立った特徴はまだありません",
+    "vibes": {
+      "all": "すべて",
+      "coffee": "コーヒー",
+      "drinks": "飲み",
+      "nature": "大自然",
+      "shopping": "買い物"
+    }
+  },
+  "lists": {
+    "subtitle": "Jonの好きな店一覧 - リンクをタップしてGoogleマップでリストを開きましょう！",
+    "openInMaps": "マップで開く ↗",
+    "missingLink": "src/data/lists.ts でリンクURLを追加してください",
+    "items": {
+      "fine-dining": {
+        "name": "レストラン",
+        "description": "おいしい料理といい雰囲気を堪能できるレストラン"
+      },
+      "cafes": {
+        "name": "カフェ",
+        "description": "作業や息抜きに最適なカフェ"
+      },
+      "pastries": {
+        "name": "パン屋",
+        "description": ""
+      },
+      "bars": {
+        "name": "バー",
+        "description": ""
+      },
+      "brunch": {
+        "name": "ブランチ",
+        "description": ""
+      },
+      "izakaya": {
+        "name": "居酒屋",
+        "description": ""
+      },
+      "ramen": {
+        "name": "ラーメン",
+        "description": ""
+      }
+    }
+  },
+  "language": {
+    "label": "言語"
+  }
+}

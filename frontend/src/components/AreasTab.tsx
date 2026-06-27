@@ -1,15 +1,16 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useAreas } from '../hooks/useAreas';
 import { AreaCard } from './AreaCard';
 
 type Vibe = 'all' | 'coffee' | 'drinks' | 'nature' | 'shopping';
 
-const VIBES: { key: Vibe; label: string; emoji: string }[] = [
-  { key: 'all', label: 'All', emoji: '🗺️' },
-  { key: 'coffee', label: 'Coffee', emoji: '☕' },
-  { key: 'drinks', label: 'Drinks', emoji: '🍻' },
-  { key: 'nature', label: 'Nature', emoji: '🌿' },
-  { key: 'shopping', label: 'Shopping', emoji: '🛍️' },
+const VIBES: { key: Vibe; emoji: string }[] = [
+  { key: 'all', emoji: '🗺️' },
+  { key: 'coffee', emoji: '☕' },
+  { key: 'drinks', emoji: '🍻' },
+  { key: 'nature', emoji: '🌿' },
+  { key: 'shopping', emoji: '🛍️' },
 ];
 
 const FALLBACK_AREAS = [
@@ -22,6 +23,7 @@ const FALLBACK_AREAS = [
 ];
 
 export function AreasTab() {
+  const { t } = useTranslation();
   const { areas, loading, error } = useAreas();
   const [activeVibe, setActiveVibe] = useState<Vibe>('all');
 
@@ -34,7 +36,7 @@ export function AreasTab() {
 
   return (
     <div>
-      <p className="text-gray-500 text-sm mb-6">Sort areas by what you're in the mood for.</p>
+      <p className="text-gray-500 text-sm mb-6">{t('areas.subtitle')}</p>
 
       <div className="flex gap-2 flex-wrap mb-8">
         {VIBES.map(v => (
@@ -47,7 +49,7 @@ export function AreasTab() {
                 : 'bg-white text-gray-600 border border-gray-200 hover:border-gray-400'
             }`}
           >
-            {v.emoji} {v.label}
+            {v.emoji} {t(`areas.vibes.${v.key}`)}
           </button>
         ))}
       </div>
@@ -64,7 +66,7 @@ export function AreasTab() {
         <>
           {(error || areas.length === 0) && (
             <p className="text-xs text-amber-600 mb-4 bg-amber-50 px-3 py-2 rounded-lg inline-block">
-              Showing sample data — connect to the API to see your real areas.
+              {t('areas.fallbackNotice')}
             </p>
           )}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

@@ -1,0 +1,59 @@
+{
+  "header": {
+    "title": "Where to today?"
+  },
+  "tabs": {
+    "lists": "My Lists",
+    "areas": "Areas"
+  },
+  "areas": {
+    "subtitle": "Sort areas by what you're in the mood for.",
+    "fallbackNotice": "Showing sample data — connect to the API to see your real areas.",
+    "noStandoutVibes": "No standout vibes yet",
+    "vibes": {
+      "all": "All",
+      "coffee": "Coffee",
+      "drinks": "Drinks",
+      "nature": "Nature",
+      "shopping": "Shopping"
+    }
+  },
+  "lists": {
+    "subtitle": "Jon's curated lists — tap any card to open it in Google Maps.",
+    "openInMaps": "Open in Maps ↗",
+    "missingLink": "Add a link URL in src/data/lists.ts",
+    "items": {
+      "fine-dining": {
+        "name": "Fine Restaurants",
+        "description": "Special occasion spots and great sit-down meals"
+      },
+      "cafes": {
+        "name": "Cafes",
+        "description": "Great cafes for working or catching up"
+      },
+      "pastries": {
+        "name": "Pastries",
+        "description": "Bakeries and pastry spots worth seeking out"
+      },
+      "bars": {
+        "name": "Bars",
+        "description": "Jon's favourite bars in Tokyo"
+      },
+      "brunch": {
+        "name": "Brunch",
+        "description": "Jon's favourite brunch spots in Tokyo"
+      },
+      "izakaya": {
+        "name": "Izakaya",
+        "description": "Best izakayas for drinks and small plates"
+      },
+      "ramen": {
+        "name": "Ramen",
+        "description": "Jon's favourite ramen spots across Tokyo"
+      }
+    }
+  },
+  "language": {
+    "label": "Language"
+  }
+}
