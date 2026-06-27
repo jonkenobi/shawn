@@ -14,7 +14,7 @@ Two sections:
 ```
 frontend/          React + Vite + Tailwind v4 frontend (new app)
 serverless-backend/ Existing AWS Lambda + DynamoDB + Terraform backend
-src/               Old Angular app (being replaced — do not touch)
+legacy-angular-app/ Old Angular app (being replaced — do not touch)
 docker-compose.yml Runs the frontend locally via Docker
 ```
 
