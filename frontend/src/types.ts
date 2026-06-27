@@ -13,6 +13,5 @@ export interface MyList {
   name: string;
   emoji: string;
   description: string;
-  myMapsId: string | null;
   linkUrl: string | null;
 }

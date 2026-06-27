@@ -6,7 +6,6 @@ export const myLists: MyList[] = [
     name: 'Fine Restaurants',
     emoji: '🍽️',
     description: 'Special occasion spots and great sit-down meals',
-    myMapsId: null,
     linkUrl: 'https://maps.app.goo.gl/q6rhZMyWkFZ1V1b96',
   },
   {
@@ -14,7 +13,6 @@ export const myLists: MyList[] = [
     name: 'Cafes',
     emoji: '☕',
     description: 'Great cafes for working or catching up',
-    myMapsId: null,
     linkUrl: 'https://maps.app.goo.gl/X29HKkeVyKgup7v48',
   },
   {
@@ -22,7 +20,6 @@ export const myLists: MyList[] = [
     name: 'Pastries',
     emoji: '🥐',
     description: 'Bakeries and pastry spots worth seeking out',
-    myMapsId: null,
     linkUrl: 'https://maps.app.goo.gl/pVKVgcpWcwWnfbJE9',
   },
   {
@@ -30,7 +27,6 @@ export const myLists: MyList[] = [
     name: 'Bars',
     emoji: '🍸',
     description: "Jon's favourite bars in Tokyo",
-    myMapsId: null,
     linkUrl: 'https://maps.app.goo.gl/UeTFUb7WUGHi2XTx8',
   },
   {
@@ -38,7 +34,6 @@ export const myLists: MyList[] = [
     name: 'Brunch',
     emoji: '🥞',
     description: "Jon's favourite brunch spots in Tokyo",
-    myMapsId: null,
     linkUrl: 'https://maps.app.goo.gl/1Cg1MrBx89B19Yv6A',
   },
   {
@@ -46,7 +41,6 @@ export const myLists: MyList[] = [
     name: 'Izakaya',
     emoji: '🏮',
     description: 'Best izakayas for drinks and small plates',
-    myMapsId: null,
     linkUrl: 'https://maps.app.goo.gl/4R9ijHuy8eDJnVeh7',
   },
   {
@@ -54,7 +48,6 @@ export const myLists: MyList[] = [
     name: 'Ramen',
     emoji: '🍜',
     description: "Jon's favourite ramen spots across Tokyo",
-    myMapsId: null,
     linkUrl: 'https://maps.app.goo.gl/HfYWtCXBSpNGgV1H6',
   },
 ];
