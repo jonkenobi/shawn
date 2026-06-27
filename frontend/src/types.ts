@@ -10,9 +10,7 @@ export interface Area {
 
 export interface MyList {
   id: string;
-  name: string;
   emoji: string;
-  description: string;
   myMapsId: string | null;
   linkUrl: string | null;
 }

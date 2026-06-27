@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import type { Area } from '../types';
 
 interface Props {
@@ -5,13 +6,14 @@ interface Props {
 }
 
 const ATTRS = [
-  { key: 'coffee',   emoji: '☕', label: 'Coffee',   bg: 'bg-amber-100',  text: 'text-amber-800'  },
-  { key: 'drinks',   emoji: '🍻', label: 'Drinks',   bg: 'bg-rose-100',   text: 'text-rose-800'   },
-  { key: 'nature',   emoji: '🌿', label: 'Nature',   bg: 'bg-green-100',  text: 'text-green-800'  },
-  { key: 'shopping', emoji: '🛍️', label: 'Shopping', bg: 'bg-indigo-100', text: 'text-indigo-800' },
+  { key: 'coffee',   emoji: '☕', bg: 'bg-amber-100',  text: 'text-amber-800'  },
+  { key: 'drinks',   emoji: '🍻', bg: 'bg-rose-100',   text: 'text-rose-800'   },
+  { key: 'nature',   emoji: '🌿', bg: 'bg-green-100',  text: 'text-green-800'  },
+  { key: 'shopping', emoji: '🛍️', bg: 'bg-indigo-100', text: 'text-indigo-800' },
 ] as const;
 
 export function AreaCard({ area }: Props) {
+  const { t } = useTranslation();
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${area.latitude},${area.longitude}`;
 
   const tags = ATTRS
@@ -31,18 +33,18 @@ export function AreaCard({ area }: Props) {
       </h3>
       {tags.length > 0 ? (
         <div className="flex flex-wrap gap-2">
-          {tags.map(t => (
+          {tags.map(tag => (
             <span
-              key={t.key}
-              className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium ${t.bg} ${t.text}`}
+              key={tag.key}
+              className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium ${tag.bg} ${tag.text}`}
             >
-              {t.emoji} {t.label}
-              {t.score === 5 && <span className="text-xs opacity-60 ml-0.5">✦</span>}
+              {tag.emoji} {t(`areas.vibes.${tag.key}`)}
+              {tag.score === 5 && <span className="text-xs opacity-60 ml-0.5">✦</span>}
             </span>
           ))}
         </div>
       ) : (
-        <p className="text-sm text-gray-400 italic">No standout vibes yet</p>
+        <p className="text-sm text-gray-400 italic">{t('areas.noStandoutVibes')}</p>
       )}
     </a>
   );

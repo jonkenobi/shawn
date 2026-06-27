@@ -1,0 +1,61 @@
+{
+  "header": {
+    "title": "今日はどこへ行く？"
+  },
+  "tabs": {
+    "lists": "マイリスト",
+    "areas": "エリア"
+  },
+  "areas": {
+    "subtitle": "気分に合わせてエリアを並び替えできます",
+    "fallbackNotice": "サンプルデータを表示中 — APIに接続すると実際のエリアが表示されます",
+    "noStandoutVibes": "目立った特徴はまだありません",
+    "vibes": {
+      "all": "すべて",
+      "coffee": "コーヒー",
+      "drinks": "ドリンク",
+      "nature": "自然",
+      "shopping": "ショッピング"
+    }
+  },
+  "lists": {
+    "subtitle": "ジョンが選んだリスト — カードをタップしてGoogleマップで開きます",
+    "viewOnMap": "地図を見る",
+    "hideMap": "地図を隠す",
+    "openInMaps": "マップで開く ↗",
+    "missingLink": "src/data/lists.ts でMy MapsのIDまたはリンクURLを追加してください",
+    "items": {
+      "fine-dining": {
+        "name": "高級レストラン",
+        "description": "特別な日にぴったりのレストラン"
+      },
+      "cafes": {
+        "name": "カフェ",
+        "description": "作業や息抜きに最適なカフェ"
+      },
+      "pastries": {
+        "name": "パン・スイーツ",
+        "description": "わざわざ訪れる価値のあるベーカリー＆スイーツ店"
+      },
+      "bars": {
+        "name": "バー",
+        "description": "ジョンお気に入りの東京のバー"
+      },
+      "brunch": {
+        "name": "ブランチ",
+        "description": "ジョンお気に入りの東京のブランチスポット"
+      },
+      "izakaya": {
+        "name": "居酒屋",
+        "description": "ドリンクと小皿料理におすすめの居酒屋"
+      },
+      "ramen": {
+        "name": "ラーメン",
+        "description": "ジョンお気に入りの東京のラーメン店"
+      }
+    }
+  },
+  "language": {
+    "label": "言語"
+  }
+}

@@ -9,8 +9,11 @@
     "preview": "vite preview --host"
   },
   "dependencies": {
+    "i18next": "^26.3.3",
+    "i18next-browser-languagedetector": "^8.2.1",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-i18next": "^17.0.8"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.8",
