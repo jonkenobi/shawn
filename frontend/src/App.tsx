@@ -35,26 +35,29 @@ export default function App() {
                 🗺️ {t('tabs.areas')}
               </button>
             </div>
-            <div className="flex bg-gray-100 rounded-xl p-1 gap-1">
-              <button
-                onClick={() => i18n.changeLanguage('en')}
-                aria-label={t('language.label')}
-                className={`px-3 py-2.5 rounded-lg text-sm font-medium transition-all ${
-                  i18n.resolvedLanguage === 'en' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-500 hover:text-gray-700'
-                }`}
+            <button
+              onClick={() => i18n.changeLanguage(i18n.resolvedLanguage === 'ja' ? 'en' : 'ja')}
+              aria-label={t('language.label')}
+              title={t('language.label')}
+              className="flex items-center justify-center w-10 h-10 rounded-lg border border-gray-200 text-gray-500 hover:text-gray-700 hover:bg-gray-100 transition-all"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.75"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
-                EN
-              </button>
-              <button
-                onClick={() => i18n.changeLanguage('ja')}
-                aria-label={t('language.label')}
-                className={`px-3 py-2.5 rounded-lg text-sm font-medium transition-all ${
-                  i18n.resolvedLanguage === 'ja' ? 'bg-white shadow-sm text-gray-900' : 'text-gray-500 hover:text-gray-700'
-                }`}
-              >
-                日本語
-              </button>
-            </div>
+                <circle cx="12" cy="12" r="9" />
+                <path d="M3 12h18" />
+                <path d="M12 3v18" />
+                <ellipse cx="12" cy="12" rx="5" ry="9" />
+              </svg>
+            </button>
           </div>
         </div>
       </header>
