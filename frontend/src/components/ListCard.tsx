@@ -11,12 +11,12 @@ export function ListCard({ list }: Props) {
 
   return (
     <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
-      <div className="p-6">
-        <span className="text-3xl mb-3 block">{list.emoji}</span>
+      <div className="p-8">
+        <span className="text-3xl mb-5 block">{list.emoji}</span>
         <h3 className="text-lg font-semibold text-gray-900">{list.name}</h3>
-        <p className="text-sm text-gray-500 mt-1.5">{list.description}</p>
+        <p className="text-sm text-gray-500 mt-2.5">{list.description}</p>
 
-        <div className="flex gap-2 mt-5">
+        <div className="flex gap-3 mt-7">
           {canEmbed && (
             <button
               onClick={() => setExpanded(e => !e)}
