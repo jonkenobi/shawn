@@ -20,10 +20,8 @@
   },
   "lists": {
     "subtitle": "Jon's curated lists — tap any card to open it in Google Maps.",
-    "viewOnMap": "View on map",
-    "hideMap": "Hide map",
     "openInMaps": "Open in Maps ↗",
-    "missingLink": "Add your My Maps ID or link URL in src/data/lists.ts",
+    "missingLink": "Add a link URL in src/data/lists.ts",
     "items": {
       "fine-dining": {
         "name": "Fine Restaurants",

@@ -20,10 +20,8 @@
   },
   "lists": {
     "subtitle": "ジョンが選んだリスト — カードをタップしてGoogleマップで開きます",
-    "viewOnMap": "地図を見る",
-    "hideMap": "地図を隠す",
     "openInMaps": "マップで開く ↗",
-    "missingLink": "src/data/lists.ts でMy MapsのIDまたはリンクURLを追加してください",
+    "missingLink": "src/data/lists.ts でリンクURLを追加してください",
     "items": {
       "fine-dining": {
         "name": "高級レストラン",
