@@ -2,14 +2,6 @@ import type { MyList } from '../types';
 
 export const myLists: MyList[] = [
   {
-    id: 'bars',
-    name: 'Bars',
-    emoji: '🍸',
-    description: "Jon's favourite bars in Tokyo",
-    myMapsId: null,
-    linkUrl: 'https://maps.app.goo.gl/UeTFUb7WUGHi2XTx8',
-  },
-  {
     id: 'fine-dining',
     name: 'Fine Restaurants',
     emoji: '🍽️',
@@ -34,12 +26,20 @@ export const myLists: MyList[] = [
     linkUrl: 'https://maps.app.goo.gl/pVKVgcpWcwWnfbJE9',
   },
   {
-    id: 'ramen',
-    name: 'Ramen',
-    emoji: '🍜',
-    description: "Jon's favourite ramen spots across Tokyo",
+    id: 'bars',
+    name: 'Bars',
+    emoji: '🍸',
+    description: "Jon's favourite bars in Tokyo",
     myMapsId: null,
-    linkUrl: 'https://maps.app.goo.gl/HfYWtCXBSpNGgV1H6',
+    linkUrl: 'https://maps.app.goo.gl/UeTFUb7WUGHi2XTx8',
+  },
+  {
+    id: 'brunch',
+    name: 'Brunch',
+    emoji: '🥞',
+    description: "Jon's favourite brunch spots in Tokyo",
+    myMapsId: null,
+    linkUrl: 'https://maps.app.goo.gl/1Cg1MrBx89B19Yv6A',
   },
   {
     id: 'izakaya',
@@ -48,5 +48,13 @@ export const myLists: MyList[] = [
     description: 'Best izakayas for drinks and small plates',
     myMapsId: null,
     linkUrl: 'https://maps.app.goo.gl/4R9ijHuy8eDJnVeh7',
+  },
+  {
+    id: 'ramen',
+    name: 'Ramen',
+    emoji: '🍜',
+    description: "Jon's favourite ramen spots across Tokyo",
+    myMapsId: null,
+    linkUrl: 'https://maps.app.goo.gl/HfYWtCXBSpNGgV1H6',
   },
 ];
