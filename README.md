@@ -13,7 +13,7 @@ TODO add instructions
 * Add more places; add more stuff related to food; add other attributes
 * In places db add attributes such as ethnic foods?
 * Find a way to auto add more areas instead of manually adding the latitude and longitude
-* Add i18n support to the frontend (English / Japanese, with a language toggle)
+* Add i18n support to the frontend (English / Japanese, with a language toggle) — lists tab done, still need to do English i18n for the areas tab
 
 Note
 No need to redploy API for adding attributes to response model
