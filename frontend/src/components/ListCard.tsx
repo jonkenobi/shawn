@@ -13,7 +13,7 @@ export function ListCard({ list }: Props) {
   return (
     <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden h-full flex flex-col">
       <div className="p-8 flex flex-col flex-1">
-        <span className="text-3xl mb-5 block">{list.emoji}</span>
+        <span className={`${list.emojiSize ?? 'text-3xl'} ${list.emojiColor ?? ''} mb-5 block`}>{list.emoji}</span>
         <h3 className="text-lg font-semibold text-gray-900">{name}</h3>
         {description && <p className="text-sm text-gray-500 mt-2.5">{description}</p>}
 

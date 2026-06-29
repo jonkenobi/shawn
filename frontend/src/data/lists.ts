@@ -36,4 +36,11 @@ export const myLists: MyList[] = [
     emoji: '🍜',
     linkUrl: 'https://maps.app.goo.gl/HfYWtCXBSpNGgV1H6',
   },
+  {
+    id: 'dates',
+    emoji: '♡',
+    emojiSize: 'text-5xl',
+    emojiColor: 'text-red-500',
+    linkUrl: 'https://maps.app.goo.gl/rtvgbK4eVHww3N2p7?g_st=i',
+  },
 ];

@@ -50,6 +50,10 @@
       "ramen": {
         "name": "ラーメン",
         "description": ""
+      },
+      "dates": {
+        "name": "デート",
+        "description": "デートに合ういい雰囲気なお店"
       }
     }
   },

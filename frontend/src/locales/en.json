@@ -50,6 +50,10 @@
       "ramen": {
         "name": "Ramen",
         "description": "Jon's favourite ramen spots across Tokyo"
+      },
+      "dates": {
+        "name": "Dates",
+        "description": "Places with good atmosphere, nice for dates"
       }
     }
   },

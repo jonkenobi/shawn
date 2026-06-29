@@ -11,5 +11,7 @@ export interface Area {
 export interface MyList {
   id: string;
   emoji: string;
+  emojiSize?: string;
+  emojiColor?: string;
   linkUrl: string | null;
 }
