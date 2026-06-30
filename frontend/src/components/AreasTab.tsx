@@ -3,10 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { useAreas } from '../hooks/useAreas';
 import { AreaCard } from './AreaCard';
 
-type Vibe = 'all' | 'coffee' | 'drinks' | 'nature' | 'shopping';
+type Vibe = 'coffee' | 'drinks' | 'nature' | 'shopping';
 
 const VIBES: { key: Vibe; emoji: string }[] = [
-  { key: 'all', emoji: '🗺️' },
   { key: 'coffee', emoji: '☕' },
   { key: 'drinks', emoji: '🍻' },
   { key: 'nature', emoji: '🌿' },
@@ -25,26 +24,46 @@ const FALLBACK_AREAS = [
 export function AreasTab() {
   const { t } = useTranslation();
   const { areas, loading, error } = useAreas();
-  const [activeVibe, setActiveVibe] = useState<Vibe>('all');
+  const [activeVibes, setActiveVibes] = useState<Vibe[]>([]);
+
+  const toggleVibe = (vibe: Vibe) => {
+    setActiveVibes(prev =>
+      prev.includes(vibe) ? prev.filter(v => v !== vibe) : [...prev, vibe]
+    );
+  };
 
   const displayAreas = error || areas.length === 0 ? FALLBACK_AREAS : areas;
 
   const sorted =
-    activeVibe === 'all'
+    activeVibes.length === 0
       ? displayAreas
-      : [...displayAreas].sort((a, b) => (b[activeVibe] ?? 0) - (a[activeVibe] ?? 0));
+      : [...displayAreas].sort(
+          (a, b) =>
+            activeVibes.reduce((sum, v) => sum + (b[v] ?? 0), 0) -
+            activeVibes.reduce((sum, v) => sum + (a[v] ?? 0), 0)
+        );
 
   return (
     <div>
       <p className="text-gray-500 text-sm mb-6">{t('areas.subtitle')}</p>
 
       <div className="flex gap-2 flex-wrap mb-8">
+        <button
+          onClick={() => setActiveVibes([])}
+          className={`cursor-pointer-desktop px-4 py-2 rounded-full text-sm font-medium transition-all ${
+            activeVibes.length === 0
+              ? 'bg-gray-900 text-white'
+              : 'bg-white text-gray-600 border border-gray-200 hover:border-gray-400'
+          }`}
+        >
+          🗺️ {t('areas.vibes.all')}
+        </button>
         {VIBES.map(v => (
           <button
             key={v.key}
-            onClick={() => setActiveVibe(v.key)}
+            onClick={() => toggleVibe(v.key)}
             className={`cursor-pointer-desktop px-4 py-2 rounded-full text-sm font-medium transition-all ${
-              activeVibe === v.key
+              activeVibes.includes(v.key)
                 ? 'bg-gray-900 text-white'
                 : 'bg-white text-gray-600 border border-gray-200 hover:border-gray-400'
             }`}
