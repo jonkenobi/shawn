@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { AreasTab } from './components/AreasTab';
 import { ListsTab } from './components/ListsTab';
@@ -8,10 +8,21 @@ type Tab = 'areas' | 'lists';
 export default function App() {
   const { t, i18n } = useTranslation();
   const [tab, setTab] = useState<Tab>('lists');
+  const headerRef = useRef<HTMLElement>(null);
+  const [headerHeight, setHeaderHeight] = useState(0);
+
+  useEffect(() => {
+    const el = headerRef.current;
+    if (!el) return;
+    const observer = new ResizeObserver(() => setHeaderHeight(el.offsetHeight));
+    observer.observe(el);
+    setHeaderHeight(el.offsetHeight);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#f8f7f4]">
-      <header className="bg-white border-b border-gray-100 sticky top-0 z-10">
+      <header ref={headerRef} className="bg-white border-b border-gray-100 sticky top-0 z-10">
         <div className="page-inner py-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h1 className="text-2xl font-bold text-gray-900 tracking-tight leading-none">{t('header.title')}</h1>
@@ -63,7 +74,7 @@ export default function App() {
       </header>
 
       <main className="page-inner py-8">
-        {tab === 'areas' ? <AreasTab /> : <ListsTab />}
+        {tab === 'areas' ? <AreasTab stickyTop={headerHeight} /> : <ListsTab />}
       </main>
     </div>
   );

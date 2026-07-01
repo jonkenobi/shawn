@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useAreas } from '../hooks/useAreas';
 import { AreaCard } from './AreaCard';
@@ -21,10 +21,17 @@ const FALLBACK_AREAS = [
   { area_name: '恵比寿 Ebisu', latitude: 35.6468, longitude: 139.7098, coffee: 4, drinks: 4, nature: 3, shopping: 3 },
 ];
 
-export function AreasTab() {
+export function AreasTab({ stickyTop = 0 }: { stickyTop?: number }) {
   const { t } = useTranslation();
   const { areas, loading, error } = useAreas();
   const [activeVibes, setActiveVibes] = useState<Vibe[]>([]);
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setShowBackToTop(window.scrollY > 300);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const toggleVibe = (vibe: Vibe) => {
     setActiveVibes(prev =>
@@ -45,9 +52,12 @@ export function AreasTab() {
 
   return (
     <div>
-      <p className="text-gray-500 text-sm mb-6">{t('areas.subtitle')}</p>
+      <p className="text-gray-500 text-sm mb-4">{t('areas.subtitle')}</p>
 
-      <div className="flex gap-2 flex-wrap mb-8">
+      <div
+        className="flex gap-2 flex-wrap sticky z-9 bg-[#f8f7f4] py-3 -mx-4 px-4 sm:-mx-6 sm:px-6 mb-5"
+        style={{ top: stickyTop }}
+      >
         <button
           onClick={() => setActiveVibes([])}
           className={`cursor-pointer-desktop px-4 py-2 rounded-full text-sm font-medium transition-all ${
@@ -72,6 +82,18 @@ export function AreasTab() {
           </button>
         ))}
       </div>
+
+      {showBackToTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          aria-label="Back to top"
+          className="fixed bottom-6 right-6 z-20 w-11 h-11 rounded-full bg-gray-900 text-white shadow-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M18 15l-6-6-6 6"/>
+          </svg>
+        </button>
+      )}
 
       {loading && (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
