@@ -1,6 +1,6 @@
 # Shawn
 
-A website to assist in picking where to hang in tokyo
+A website that assists in picking where to hang in tokyo
 https://jonkenobi.github.io/shawn/
 
 ## How to deploy API 
