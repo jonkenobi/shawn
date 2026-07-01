@@ -44,10 +44,16 @@ export function AreasTab({ stickyTop = 0 }: { stickyTop?: number }) {
   const matchCount = (area: typeof displayAreas[0]) =>
     activeVibes.filter(v => (area[v] ?? 0) >= 3).length;
 
+  const scoreSum = (area: typeof displayAreas[0]) =>
+    activeVibes.reduce((sum, v) => sum + (area[v] ?? 0), 0);
+
   const sorted =
     activeVibes.length === 0
       ? displayAreas
-      : [...displayAreas].sort((a, b) => matchCount(b) - matchCount(a));
+      : [...displayAreas].sort((a, b) => {
+          const matchDiff = matchCount(b) - matchCount(a);
+          return matchDiff !== 0 ? matchDiff : scoreSum(b) - scoreSum(a);
+        });
 
   return (
     <div>
