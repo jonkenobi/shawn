@@ -41,14 +41,13 @@ export function AreasTab({ stickyTop = 0 }: { stickyTop?: number }) {
 
   const displayAreas = error || areas.length === 0 ? FALLBACK_AREAS : areas;
 
+  const matchCount = (area: typeof displayAreas[0]) =>
+    activeVibes.filter(v => (area[v] ?? 0) >= 3).length;
+
   const sorted =
     activeVibes.length === 0
       ? displayAreas
-      : [...displayAreas].sort(
-          (a, b) =>
-            activeVibes.reduce((sum, v) => sum + (b[v] ?? 0), 0) -
-            activeVibes.reduce((sum, v) => sum + (a[v] ?? 0), 0)
-        );
+      : [...displayAreas].sort((a, b) => matchCount(b) - matchCount(a));
 
   return (
     <div>
