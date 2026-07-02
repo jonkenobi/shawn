@@ -37,19 +37,19 @@
       },
       "bars": {
         "name": "バー",
-        "description": ""
+        "description": "「バー」"
       },
       "brunch": {
         "name": "ブランチ",
-        "description": ""
+        "description": "Breakfast（ブレークファスト）＋ Lunch（ランチ）＝ Brunch（ブランチ）"
       },
       "izakaya": {
         "name": "居酒屋",
-        "description": ""
+        "description": "いざかや"
       },
       "ramen": {
         "name": "ラーメン",
-        "description": ""
+        "description": "Men"
       }
     }
   },
